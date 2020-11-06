@@ -192,13 +192,13 @@ Para la primera vez que pruebes estos valores es muy importante cumplir los sig�
 Personalmente he provado estos ajustes con las palas por defecto que vienen con el Reddy 1.3 y con las Hurricane 5146 de GemFan.    
 Me han gustado mas las Hurricane 5146 pero las que vienen por defecto no dan un mal resultado.   
 
--Temperaduta de los motores    
+- Temperaduta de los motores    
 Volar 30s-1min tranquilo, sin dar mucho "gas" y bajar el drone para comprovar temperatura de los motores.    
 No tendrían que calentarse. Un buen indicador es poder mantener el dedo mas de 3s en contacto con el motor, eso nos indica que esta por debajo de 60ºC.    
 Volver a volar otros 30s-1min como volaríamos de forma normal y bajar el drone para comprovar temperatura de los motores.  
 Si no se nos han calentado podemos volar con seguridad   
 
--Flip over after Crash  
+- Flip over after Crash  
 Si usais este modo, sirve para dal la vuelta al drone cuando chocamos y quedamos boca-abajo, después de todas estas comprovaciones recomiendo provar 3 o 4 veces este modo y volver a revisar la temperatura de los motores. Después de usar este modo normalmente se calentarán mas de lo normal ya que pedimos un sobreesfuerzo al motor. Comprovar que esto no pueda ocasionaros altas temperaturas.   
 
 Siempre podemos volver a los PID por defecto, poniendo todos los sliders (barritas) a 1.  
