@@ -64,10 +64,8 @@ Esta pantalla es una de las mas importantes en cuanto a el rendimiento de nuestr
 La opción **MOTOR_STOP** controla si los motores girarán o no al armar el quad.  
 Si los motores giran al armar el quad y tenemos esta opción deshabilitada seguramente tendremos habilitado el **AIR MODE**.  
 Por defecto el **Motor Idle Throttle value [percent]** tiene un valor de 4.5, esto es el porcentaje al que giraran los motores al armar.  
-Por defecto el numero de **Polos del motor** viene como 14. Estos son el numero de imanes que tiene tu campana de motor.  
-En tinnys a veces este numero se reduce ya que los motores son mas pequeños. Rondan sobre 12.  
-Lo mejor es asegurarse mirando una campana de nuestros motores. 
-Se puede habilitar el bidirectional con el switch **DShot Bidirectional**. 
+Por defecto el numero de **Polos del motor** viene como 14. Estos son el numero de imanes que tiene tu campana de motor Xing-e 2207 2450Kv.   
+Recomiendo habilitar el bidirectional con el switch **DShot Bidirectional**. 
 Aunque los ESC de la F50 Pro pueden llegar a DSHOT1200 recomiendo poner el **DSHOT 600**.
 
 <img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/DshotReddy.PNG">
@@ -78,8 +76,8 @@ El **Acelerómetro** es el sensor que nos ayuda a controlar la inclinazión del 
 En caso de volar en **Angle Mode** o **Horizon Mode** necesitas tener activado este sensor.    
 Revisa la pantalla de Ajustes para ver como calibrar el quad si usas esos modos.    
 Normalmente las controladoras de vuelo no trae equipado un Barómetro ni un Magnetómetro.     
-Lo mejor en estos casos es **Desactivar** estos dos sensores.   
-El mejor valor para el **PID LOOP** es a **8k**    
+Lo mejor para el rendimiento es **Desactivar** los dos sensores (Barómetro y Magnetómetro).   
+El mejor valor para el **PID LOOP** es a **8k**.      
 
 Los ESC del Stack MAMBA que nos vienen con el Reddy 1.3 ya estan actualizados, pero si en un futuro los cambiamos recordad de tener los ESC actualizados a la útltima versión.
 
@@ -115,6 +113,71 @@ Puedes consutar los escalados recomendados por el fabricante en el manual de tu 
 
 ### Pantalla de Ajustar PID
 
+Antes de empezar a Ajustar los PID, Rates y Filtros, os recomiendo copiar los sigüientes comandos en la pantalla del CLI.
+Os dejo los ajustes mas usados, podeis encontrar todos en https://github.com/AirbenderFPV/Ajustes-rapidos-recomendados-en-Betaflight-4.2.x  
+Es muy importante ejecutar el comando **Save** despues de cada Copy/Paste.  
+
+**Race y Freestyle**  
+set iterm_relax_cutoff = 20  
+set rc_smoothing_auto_smoothness = 7  
+set ff_interpolate_sp = AVERAGED_2  
+set ff_smooth_factor = 20  
+set ff_spike_limit = 70  
+set ff_boost = 15  
+set feedforward_transition = 0  
+set yaw_lowpass_hz = 100  
+set throttle_boost = 7  
+set throttle_boost_cutoff = 25  
+set dyn_lpf_dterm_curve_expo = 7  
+set gyro_rpm_notch_q = 700  
+
+**Grabaciones HD (Reddy con Camara de acción, movimientos menos agresivos)**  
+set iterm_relax_cutoff = 10  
+set rc_smoothing_auto_smoothness = 20  
+set ff_interpolate_sp = AVERAGED_3  
+set ff_smooth_factor = 40  
+set ff_spike_limit = 55  
+set ff_boost = 0  
+set feedforward_transition = 40  
+set yaw_lowpass_hz = 70  
+set throttle_boost = 5  
+set throttle_boost_cutoff = 10  
+set dyn_lpf_dterm_curve_expo = 7  
+set gyro_rpm_notch_q = 800  
+
+**Mejora rendimiento 4in1 ESC**  
+set dyn_lpf_dterm_curve_expo = 6  
+set vbat_sag_compensation = 100  
+set vbat_pid_gain = OFF  
+set rc_smoothing_type = FILTER  
+set rc_smoothing_input_hz = 0  
+set rc_smoothing_derivative_hz = 0  
+set rc_smoothing_input_type = BIQUAD  
+set rc_smoothing_derivative_type = PT1  
+set rc_smoothing_auto_smoothness = 10  
+
+Recordad es muy importante ejecutar el comando **Save** despues de cada Copy/Paste para que se guarden los ajustes.  
+Personalmente vuelo con los ajustes de **Race y Freestyle** y con la **Mejora rendimiento 4in1 ESC** que me ha dado más estabilidad y más tiempo de vuelo.
+
+Si en algún momento quereis vover a los valores por defecto:  
+
+**Valores por defecto**    
+set iterm_relax_cutoff = 15    
+set rc_smoothing_auto_smoothness = 10    
+set ff_interpolate_sp = AVERAGED_2    
+set ff_smooth_factor = 37    
+set ff_spike_limit = 60    
+set ff_boost = 15    
+set feedforward_transition = 0    
+set yaw_lowpass_hz = 0    
+set throttle_boost = 5    
+set throttle_boost_cutoff = 15    
+set dyn_lpf_dterm_curve_expo = 5   
+set gyro_rpm_notch_q = 500   
+set iterm_windup = 100   
+
+Una vez aplicados estos "pretunes" vamos a profundizar
+
 #### PID  
 
 Esta pestaña nos ayuda a calibrar el PID de nuestro quad, si tienes poca experiencia es mejor provar los ajustes por defecto.  
@@ -124,7 +187,7 @@ Una vez hayas volado un tiempo, puedes poner los siguientes valores y provar si 
 
 Para la primera vez que pruebes estos valores es muy importante cumplir los sigüientes requisitos:
 
-- Palas nuevas, sin defectos ni deformaciones     
+- Palas nuevas, sin defectos ni deformaciones      
 Personalmente he provado estos ajustes con las palas por defecto que vienen con el Reddy 1.3 y con las Hurricane 5146 de GemFan.  
 Me han gustado mas las Hurricane 5146 pero las que vienen por defecto no dan un mal resultado.  
 
@@ -133,6 +196,9 @@ Volar 30s-1min tranquilo, sin dar mucho "gas" y bajar el drone para comprovar te
 No tendrían que calentarse. Un buen indicador es poder mantener el dedo mas de 3s en contacto con el motor, eso nos indica que esta por debajo de 60ºC.  
 Volver a volar otros 30s-1min como volaríamos de forma normal y bajar el drone para comprovar temperatura de los motores.
 Si no se nos han calentado podemos volar con seguridad 
+
+-Flip over after Crash  
+Si usais este modo, sirve para dal la vuelta al drone cuando chocamos y quedamos boca-abajo, después de todas estas comprovaciones recomiendo provar 3 o 4 veces este modo y volver a revisar la temperatura de los motores. Después de usar este modo normalmente se calentarán mas de lo normal ya que pedimos un sobreesfuerzo al motor. Comprovar que esto no pueda ocasionaros altas temperaturas.  
 
 
 #### TASAS  
@@ -146,21 +212,17 @@ Esta pestaña nos ayuda a filtrar las señales de nuestro quad, si tienes poca e
 <img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/Filtros.PNG">
 
 Es muy recomendable en esta pestaña editar los valores del **Filtro Notch Dinámico** situado en la parte inferior izquierda.  
-Los valores recomdendados y provados por Joshua Bradwell son los que aparecen en la imagen.  
+Los valores recomdendados y provados por Joshua Bradwell, QuadMX y Airbender_FPV son los que aparecen en la imagen.  
 Giro Filtro Notch Dinámico Ancho = 0  
 Giro Filtro Notch Dinámico Q =250   
 Giro Filtro Notch Dinámico Min =90   
 Giro Filtro Notch Dinámico Max =350   
 
-Además, los valores multiplicadores **Filtro Giro** y **Filtro D Term** se pueden mover un poco para filtrar menos la señal que enviamos a nuestro quad y tener una respuesta mas rapida. Hay que mover los dos por igual.  
+Además, los valores multiplicadores **Filtro Giro** y **Filtro D Term** se pueden mover un poco para filtrar menos la señal que enviamos a nuestro quad y tener una respuesta mas rápida. Hay que mover los dos por igual.  
 
-Personalmente he provado el valor **1.2 en ambos**, si provais alguno y no os convence volver a el valor por defecto 1 en ambos.  
-
-Para mas información de ajustes rapidos recomendados visita:
-
-[Ajustes rapidos recomendados en Betaflight 4.2.x] https://github.com/AirbenderFPV/Ajustes-rapidos-recomendados-en-Betaflight-4.2.x
-
-
+Personalmente he provado el valor **1.2 en ambos**, y me da muy buen resultado para el freestyle.    
+Para algo mas cinematico dejad el valor por defecto 1 en ambos.  
+Si provais alguno y no os convence volver a el valor por defecto 1 en ambos.   
 
 ### Pantalla de Caja Negra
 
