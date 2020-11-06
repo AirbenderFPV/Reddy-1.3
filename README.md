@@ -113,9 +113,9 @@ Puedes consutar los escalados recomendados por el fabricante en el manual de tu 
 
 ### Pantalla de Ajustar PID
 
-Antes de empezar a Ajustar los PID, Rates y Filtros, os recomiendo copiar los sigüientes comandos en la pantalla del CLI.
-Os dejo los ajustes mas usados, podeis encontrar todos en https://github.com/AirbenderFPV/Ajustes-rapidos-recomendados-en-Betaflight-4.2.x  
-Es muy importante ejecutar el comando **Save** despues de cada Copy/Paste.  
+Antes de empezar a Ajustar los PID, Rates y Filtros, os recomiendo copiar los sigüientes comandos en la pantalla del CLI.  
+Os dejo los ajustes mas usados, podeis encontrar todos en https://github.com/AirbenderFPV/Ajustes-rapidos-recomendados-en-Betaflight-4.2.x    
+Es muy importante ejecutar el comando **Save** despues de cada Copy/Paste.   
 
 **Race y Freestyle**  
 set iterm_relax_cutoff = 20  
