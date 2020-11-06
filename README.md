@@ -2,7 +2,7 @@
 
 Configuración PREMIUM para Reddy 1.3 de DeDrones
 
-<img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/Reddy.PNG">
+<img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/reddy.PNG">
 
 ¿Te has comprado un Reddy de DeDrones? ¿Quieres sacarle más partido?  
 
