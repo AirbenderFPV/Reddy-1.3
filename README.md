@@ -96,7 +96,7 @@ Normalmente se dejan tal como vienen de serie a excepción de estas tres, que **
 Activa permanentemente el Air Mode. Se puede deshabilitar aqui i condicionarlo en la pantalla de Modos.  
 - OSD:  
 Permite sobreponer información sobre la imagen de la camara. Se configura en la pantalla de OSD.  
-- DYNAMIC_FILTER
+- DYNAMIC_FILTER:  
 Filtro dinamico para el giroscopio
 
 ### Pantalla de Energía y Batería
@@ -181,30 +181,38 @@ Una vez aplicados estos "pretunes" vamos a profundizar
 #### PID  
 
 Esta pestaña nos ayuda a calibrar el PID de nuestro quad, si tienes poca experiencia es mejor provar los ajustes por defecto.  
-Una vez hayas volado un tiempo, puedes poner los siguientes valores y provar si mejora tu experiencia de vuelo.    
+Una vez hayas volado un tiempo, puedes poner los siguientes valores y provar si mejora tu experiencia de vuelo.   
+Los PID que vereis a continuación son para Freestyle, bastante genéricos, pero nos ayudaran a mejorar la experiencia de vuelo con el Reddy 1.3.  
 
 <img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/PIDsFreestyleReddy.PNG">
 
-Para la primera vez que pruebes estos valores es muy importante cumplir los sigüientes requisitos:
+Para la primera vez que pruebes estos valores es muy importante cumplir los sigüientes requisitos:  
 
-- Palas nuevas, sin defectos ni deformaciones      
-Personalmente he provado estos ajustes con las palas por defecto que vienen con el Reddy 1.3 y con las Hurricane 5146 de GemFan.  
-Me han gustado mas las Hurricane 5146 pero las que vienen por defecto no dan un mal resultado.  
+- Palas nuevas, sin defectos ni deformaciones       
+Personalmente he provado estos ajustes con las palas por defecto que vienen con el Reddy 1.3 y con las Hurricane 5146 de GemFan.    
+Me han gustado mas las Hurricane 5146 pero las que vienen por defecto no dan un mal resultado.   
 
--Temperaduta de los motores  
-Volar 30s-1min tranquilo, sin dar mucho "gas" y bajar el drone para comprovar temperatura de los motores.  
-No tendrían que calentarse. Un buen indicador es poder mantener el dedo mas de 3s en contacto con el motor, eso nos indica que esta por debajo de 60ºC.  
-Volver a volar otros 30s-1min como volaríamos de forma normal y bajar el drone para comprovar temperatura de los motores.
-Si no se nos han calentado podemos volar con seguridad 
+-Temperaduta de los motores    
+Volar 30s-1min tranquilo, sin dar mucho "gas" y bajar el drone para comprovar temperatura de los motores.    
+No tendrían que calentarse. Un buen indicador es poder mantener el dedo mas de 3s en contacto con el motor, eso nos indica que esta por debajo de 60ºC.    
+Volver a volar otros 30s-1min como volaríamos de forma normal y bajar el drone para comprovar temperatura de los motores.  
+Si no se nos han calentado podemos volar con seguridad   
 
 -Flip over after Crash  
-Si usais este modo, sirve para dal la vuelta al drone cuando chocamos y quedamos boca-abajo, después de todas estas comprovaciones recomiendo provar 3 o 4 veces este modo y volver a revisar la temperatura de los motores. Después de usar este modo normalmente se calentarán mas de lo normal ya que pedimos un sobreesfuerzo al motor. Comprovar que esto no pueda ocasionaros altas temperaturas.  
+Si usais este modo, sirve para dal la vuelta al drone cuando chocamos y quedamos boca-abajo, después de todas estas comprovaciones recomiendo provar 3 o 4 veces este modo y volver a revisar la temperatura de los motores. Después de usar este modo normalmente se calentarán mas de lo normal ya que pedimos un sobreesfuerzo al motor. Comprovar que esto no pueda ocasionaros altas temperaturas.   
+
+Siempre podemos volver a los PID por defecto, poniendo todos los sliders (barritas) a 1.  
 
 
 #### TASAS  
-Esta pestaña nos ayuda a calibrar los "rates" o tasas de nuestro quad, en otras palabras la sensibilidad de nuestros sticks.   
-Podemos editar el perfil de cada palanca editando los valores para respuestas mas ajustadas a nuestra forma de volar.  
-Si tienes poca experiencia es mejor dejar los ajustes por defecto.  
+Esta pestaña nos ayuda a calibrar los "rates" o tasas de nuestro quad, en otras palabras la sensibilidad de nuestros sticks.     
+Podemos editar el perfil de cada palanca editando los valores para respuestas mas ajustadas a nuestra forma de volar.   
+Os dejo los Rates que tengo yo para tener un mejor control del centro del accelerador:  
+
+<img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/RatesReddy.PNG">
+
+Evidentemente, esta pantalla es la que mas se personaliza por la forma de vuelo de cada piloto.  
+Si ya teneis unos Rates que os ivan bien, os animo a provar todos estos ajustes con vuestros rates!  
 
 #### FILTROS  
 Esta pestaña nos ayuda a filtrar las señales de nuestro quad, si tienes poca experiencia es mejor dejar los ajustes por defecto.  
