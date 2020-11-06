@@ -65,7 +65,7 @@ La opción **MOTOR_STOP** controla si los motores girarán o no al armar el quad
 Si los motores giran al armar el quad y tenemos esta opción deshabilitada seguramente tendremos habilitado el **AIR MODE**.  
 Por defecto el **Motor Idle Throttle value [percent]** tiene un valor de 4.5, esto es el porcentaje al que giraran los motores al armar.  
 Por defecto el numero de **Polos del motor** viene como 14. Estos son el numero de imanes que tiene tu campana de motor Xing-e 2207 2450Kv.   
-Recomiendo habilitar el bidirectional con el switch **DShot Bidirectional**. 
+Recomiendo habilitar el bidirectional con el switch **DShot Bidirectional**.   
 Aunque los ESC de la F50 Pro pueden llegar a DSHOT1200 recomiendo poner el **DSHOT 600**.
 
 <img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/DshotReddy.PNG">
