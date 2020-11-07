@@ -43,6 +43,7 @@ Con aplicación **SpeedyBee** nos podemos conectar por Bluetooth y cambiar valor
 Puedes consultar los puertos y configuraciones recomendadas por el fabricante en el manual de tu controladora de vuelo, que en el caso del Reddy 1.3 es el Stack MAMBA 722S con la F50 Pro:  
 
 [MAMBA F722] https://www.diatone.us/collections/mamba-stack/products/mamba-f722s-flight-controller-stack
+[MAMBA F722 Diagrama]https://cdn.shopify.com/s/files/1/0027/2708/4144/files/1_F722S_F50PRO.jpg?v=1577435261
 
 ### Pantalla de Ajustes  
 
