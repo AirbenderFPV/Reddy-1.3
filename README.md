@@ -64,7 +64,7 @@ Esta pantalla es una de las más importantes en cuanto al rendimiento de nuestro
 #### Funcionalidades ESC/Motor:
 La opción **MOTOR_STOP** controla si los motores girarán o no al armar el quad.  
 Si los motores giran al armar el quad y tenemos esta opción deshabilitada seguramente tendremos habilitado el **AIR MODE**.  
-Por defecto el **Motor Idle Throttle value [percent]** tiene un valor de 4.5, esto es el porcentaje al que giraran los motores al armar.  
+Por defecto el **Motor Idle Throttle value [percent]** tiene un valor de 4.5, esto es el porcentaje al que giraran los motores al armar y el mínimo que giraran los motores en el airmode. Si notamos que nuestro quad flota un poco, podemos bajar este valor. Si lo bajamos por debajo de 4 recomiendo que al armar el quad mireis si todos los motores giran bien, bajar este valor puede hacer que los motores no lleguen a la corriente nominal para girar y no giren bien.  
 Por defecto el número de **Polos del motor** viene como 14. Estos son el número de imanes que tiene tu campana de motor Xing-e 2207 2450Kv.   
 Recomiendo habilitar el bidirectional con el switch **DShot Bidirectional**.   
 Aunque los ESC de la F50 Pro pueden llegar a DSHOT1200 recomiendo poner el **DSHOT 600**.
