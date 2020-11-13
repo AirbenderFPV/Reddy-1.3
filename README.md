@@ -6,9 +6,9 @@ Configuración avanzada para Reddy 1.3 de DeDrones.
 
 ¿Te has comprado un Reddy de DeDrones? ¿Quieres sacarle más partido?  
 
-En este repositorio enseñaré las cosas básicas que puede hacer mejorar nuestra experiencia con el **Reddy 1.3** de DeDrones.  
-He usado la versión **Betaflight 4.2.4** recordad que para usar esta versión de Betaflight es necesario el **Betaflight Configurator version 10.7.0**.    
-Antes de usar estas recomendaciones os aconsejo seguir los videotutoriales que el equipo de DeDrones nos da junto al Reddy.  
+En este repositorio enseñaré las cosas básicas que puede hacer mejorar nuestra experiencia con el **Reddy 1.3** de DeDrones.
+He usado la versión **Betaflight 4.2.4** recordad que para usar esta versión de Betaflight es necesario el **Betaflight Configurator version 10.7.0**.
+Antes de usar estas recomendaciones os aconsejo seguir los videotutoriales que el equipo de DeDrones nos da junto al Reddy.
 También recomiendo que si este es tu primer drone, vueles primero con los valores por defecto de Betaflight para hacerte un poco al drone.  
 El uso de esta información queda bajo la responsabilidad de cada usuario.  
 
