@@ -132,7 +132,7 @@ set throttle_boost_cutoff = 25
 set dyn_lpf_dterm_curve_expo = 7  
 set gyro_rpm_notch_q = 700  
 
-**Grabaciones HD**  (Reddy con Cámara de acción, movimientos menos agresivos) 
+**Grabaciones HD**  (Reddy con Cámara de acción, movimientos menos agresivos)   
 set iterm_relax_cutoff = 10  
 set rc_smoothing_auto_smoothness = 20  
 set ff_interpolate_sp = AVERAGED_3  
@@ -146,7 +146,7 @@ set throttle_boost_cutoff = 10
 set dyn_lpf_dterm_curve_expo = 7  
 set gyro_rpm_notch_q = 800  
 
-**Mejora rendimiento 4in1 ESC**  
+**Mejora rendimiento 4in1 ESC**    
 set dyn_lpf_dterm_curve_expo = 6  
 set vbat_sag_compensation = 100  
 set vbat_pid_gain = OFF  
@@ -162,7 +162,7 @@ Personalmente vuelo con los ajustes de **Race y Freestyle** y con la **Mejora re
 
 Si en algún momento queréis volver a los valores por defecto:  
 
-**Valores por defecto**    
+**Valores por defecto**     
 set iterm_relax_cutoff = 15    
 set rc_smoothing_auto_smoothness = 10    
 set ff_interpolate_sp = AVERAGED_2    
